@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/profile_data.dart';
+import 'package:flutter_app/profile_data1.dart';
 import 'package:provider/provider.dart';
 
 class ProfileWidget extends StatelessWidget {
@@ -9,13 +10,13 @@ class ProfileWidget extends StatelessWidget {
   }
 
   Widget getBody() {
-    return Consumer<ProfileData>(builder: (ctx, model, _) {
+    return Consumer2<ProfileData,ProfileData1>(builder: (ctx, model,model1, _) {
       return Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.network(
-              model.url),
+              model1.url),
           SizedBox(
             height: 10,
           ),

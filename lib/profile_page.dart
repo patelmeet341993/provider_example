@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/profile_data.dart';
+import 'package:flutter_app/profile_data1.dart';
 import 'package:flutter_app/profile_widget.dart';
 import 'package:provider/provider.dart';
 
@@ -11,11 +12,15 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
 
  late ProfileData pd;
+ late ProfileData1 pd1;
 
-  @override
+
+ @override
   Widget build(BuildContext context) {
 
     pd=Provider.of<ProfileData>(context,listen: false);
+    pd1=Provider.of<ProfileData1>(context,listen: false);
+
 
     return SafeArea(
         child: Scaffold(
@@ -50,16 +55,16 @@ class _ProfilePageState extends State<ProfilePage> {
 
 
 
-                  pd.changeUrl("https://www.pinkvilla.com/files/styles/app-section/public/fresh_pairings_in_bollywood_main.jpg?itok=CAt9WUSI");
+                  pd1.changeUrl("https://www.pinkvilla.com/files/styles/app-section/public/fresh_pairings_in_bollywood_main.jpg?itok=CAt9WUSI");
 
                 }),
                 myBtn("Img2", () {
 
-                  pd.changeUrl("https://www.pinkvilla.com/files/styles/app-section/public/prince_harry_meghan_markle__1.jpeg?itok=uI0kYrFu");
+                  pd1.changeUrl("https://www.pinkvilla.com/files/styles/app-section/public/prince_harry_meghan_markle__1.jpeg?itok=uI0kYrFu");
 
                 }),
                 myBtn("Img3", () {
-                  pd.changeUrl("https://www.pinkvilla.com/files/styles/app-section/public/akshay_kumar_sooryavanshi_main.jpg?itok=qYXVlhLX");
+                  pd1.changeUrl("https://www.pinkvilla.com/files/styles/app-section/public/akshay_kumar_sooryavanshi_main.jpg?itok=qYXVlhLX");
                 }),
               ],
             )
