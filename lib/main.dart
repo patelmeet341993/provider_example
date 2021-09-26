@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/homepage.dart';
 import 'package:flutter_app/mydata.dart';
 import 'package:flutter_app/pageview_example.dart';
+import 'package:flutter_app/profile_data.dart';
+import 'package:flutter_app/profile_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -16,9 +18,11 @@ class MyApp extends StatelessWidget {
 
       providers: [
         ChangeNotifierProvider(create: (context)=>MyData()),
+        ChangeNotifierProvider(create: (context)=>ProfileData()),
+
       ],
       child: MaterialApp(
-        home: PageViewExample(),
+        home: ProfilePage(),
       ),
     );
   }
